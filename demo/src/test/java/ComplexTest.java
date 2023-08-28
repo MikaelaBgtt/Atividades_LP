@@ -5,7 +5,7 @@ import classes.exercise04.Complex;
 public class ComplexTest {
     @Test
     public void Angulo(){
-        Complex complex = new Complex(1,Math.sqrt(3));
+        Complex complex = new Complex(1,-1);
         System.out.println(complex.getArgument());
 
     }
