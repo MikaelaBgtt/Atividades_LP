@@ -1,0 +1,15 @@
+	celula c1;
+	c1.conteudo = 10;
+	c1.seg =  NULL;
+	celula *lst;
+	lst = NULL;
+	lst = &c1;
+	celula c2;
+	c2.conteudo = 20;		
+	c2.seg = NULL
+	lst->seg = &c2 //é uma forma indireta de dizer que c1.seg = &c2, já que c1 tem seu endereço apontado por lst1
+
+	celula *p;
+	p = malloc(sizeof(celula)); //aponta para uma célula sem precisar de variável, "é o sistema que oferece o endereço" *p[ 7x222 ]
+	p-> conteudo = 100;
+	p-> seg=NULL;

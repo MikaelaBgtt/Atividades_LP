@@ -1,0 +1,40 @@
+Alocação de memória conforme a necessidade e liberando conforme não precisa mais dela ---> LISTA ENCADEADA
+
+
+LST -> |  | |   ou    *LST
+
+CÉLULA:
+
+struct cel {
+  int conteudo;
+  struct cel *seg;
+}
+---------------------------------------------
+typedef
+struct cel {
+ int conteudo;
+ struct cel *seg;
+} celula;
+
+celula a;
+
+void main(){
+  celula lst1; ---> 8 bytes
+  
+  lst1.conteudo = 10; //fica algo como |  10  |•|
+  list1.seg = NULL;
+  celula *lst2; -->vai apontar apenas para tipos "célula"; tem 8 bytes e +4 do ponteiro
+  lst2 = NULL;
+
+>> lst1.seg = &lst2; //isso vai dar ERRO
+
+  lst2 = &lst1; //correto
+
+  //seg só serve para apontar CÉLULAS, não ponteiros. Ele espera apontar pra algo de 8 bytes, não 4. Há diferença entre um ponteiro tipo célula e ponteiro de célula.
+  (  |   |•| != celula *lst2)
+
+  prinf("%d", lst2->conteudo++); //10 //se fosse ++ antes da variavel, ia somar e depois imprimir, se tivéssemos colocado antes, ia imprimir 11.
+  prinf("%d", lst2->conteudo); //11
+  
+_______________________________________________
+
